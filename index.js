@@ -3,6 +3,7 @@ const { default: mongoose } = require('mongoose');
 const app = express();
 const path = require('path');
 const Campground = require('./models/campground');
+const ejs = require('ejs');
 
 
 main().catch(err => console.log(err));
@@ -19,6 +20,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.get("/", (req,res)=>{
     res.render('home');
+});
+
+app.get('/campgrounds', async (req,res) =>{
+    const campgrounds = await Campground.find({});
+    res.render('campgrounds/index', {campgrounds});
 });
 
 app.listen(4444, () =>{
