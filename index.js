@@ -56,6 +56,11 @@ app.put('/campgrounds/:id', async (req,res) =>{
     res.redirect(`/campgrounds/${campground._id}`);
 });
 
+app.delete('/campgrounds/:id', async (req,res) =>{
+    await Campground.findByIdAndDelete(req.params.id);
+    res.redirect('/campgrounds');
+});
+
 app.listen(4444, () =>{
     console.log("Running on port 4000...")
 });
