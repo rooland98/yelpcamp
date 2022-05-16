@@ -21,12 +21,6 @@ app.get("/", (req,res)=>{
     res.render('home');
 });
 
-app.get('/make-campground', async (req,res) =>{
-    const camp = new Campground({title: 'Lort peak'});
-    await camp.save();
-    res.send(camp);
-});
-
 app.listen(4444, () =>{
     console.log("Running on port 4000...")
 });
