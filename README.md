@@ -31,7 +31,7 @@ Features implemented so far:
 - Templating
 - Custom middleware for error handling
 - Validations on client side with Joi schemas
-- 
+
 To Do tasks:
 - Design improvements, responsive design
 - Login/Register system
