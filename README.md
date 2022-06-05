@@ -17,6 +17,7 @@ NPM packages:
   - Mongoose
   - EJS, EJS-mate
   - Morgan
+  - Joi
 
 ## Roadmap
 
@@ -27,15 +28,14 @@ Features implemented so far:
 - Basic Styling
 - Campgrounds pages(user can add/edit a campground)
 - Templating
-
+- Custom middleware for error handling
+- Validations on client side with Joi schemas
+- 
 To Do tasks:
 - Design improvements, responsive design
 - Login/Register system
-- Authentication
-- Custom middleware for error handling
+- Authentication & Authorization
 - Cookies & Sessions
 - Solutions for common security issues
-- Proper Validations
 - Map and Geocoding
-- Cloud database
 - Deployment to heroku
