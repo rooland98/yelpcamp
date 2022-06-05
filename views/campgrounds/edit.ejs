@@ -1,18 +1,27 @@
 <% layout('layouts/boilerplate')%> 
     <h1 class="text-center">Edit campground</h1>
     <div class="col-6 offset-3">
-        <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+        <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" novalidate class="validated-form">
             <div class="mb-3">
                 <label class="form-label" for="title">Edit Title</label>
                 <input class="form-control" type="text" id="title" name="campground[title]" value="<%= campground.title %> " required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="location">Edit Location</label>
                 <input class="form-control" type="text" id="location" name="campground[location]" value="<%= campground.location %> " required>
+                <div class="valid-feedback">
+                    Great image!
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="image">Edit Image Url</label>
                 <input class="form-control" type="text" id="image" name="campground[image]" value="<%= campground.image %> " required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="price">Edit Campground price</label>
@@ -24,6 +33,9 @@
             <div class="mb-3">
                 <label class="form-label" for="description">Edit Description</label>
                 <textarea class="form-control" type="text" id="description" name="campground[description]" required><%= campground.description %></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
             </div>
             <div class="mb-3">
                 <button class="btn btn-success" type="submit">Update</button>
